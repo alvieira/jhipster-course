@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TasksAddComponent } from './tasks-add.component';
 
@@ -6,12 +6,12 @@ describe('TasksAddComponent', () => {
   let component: TasksAddComponent;
   let fixture: ComponentFixture<TasksAddComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ TasksAddComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TasksAddComponent);
@@ -19,7 +19,7 @@ describe('TasksAddComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
