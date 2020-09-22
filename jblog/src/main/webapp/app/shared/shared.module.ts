@@ -1,49 +1,14 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { DatePipe } from '@angular/common';
-
-import {
-    JblogSharedLibsModule,
-    JblogSharedCommonModule,
-    CSRFService,
-    AuthServerProvider,
-    AccountService,
-    UserService,
-    StateStorageService,
-    LoginService,
-    LoginModalService,
-    Principal,
-    HasAnyAuthorityDirective,
-    JhiLoginModalComponent
-} from './';
+import { NgModule } from '@angular/core';
+import { JblogSharedLibsModule } from './shared-libs.module';
+import { AlertComponent } from './alert/alert.component';
+import { AlertErrorComponent } from './alert/alert-error.component';
+import { LoginModalComponent } from './login/login.component';
+import { HasAnyAuthorityDirective } from './auth/has-any-authority.directive';
 
 @NgModule({
-    imports: [
-        JblogSharedLibsModule,
-        JblogSharedCommonModule
-    ],
-    declarations: [
-        JhiLoginModalComponent,
-        HasAnyAuthorityDirective
-    ],
-    providers: [
-        LoginService,
-        LoginModalService,
-        AccountService,
-        StateStorageService,
-        Principal,
-        CSRFService,
-        AuthServerProvider,
-        UserService,
-        DatePipe
-    ],
-    entryComponents: [JhiLoginModalComponent],
-    exports: [
-        JblogSharedCommonModule,
-        JhiLoginModalComponent,
-        HasAnyAuthorityDirective,
-        DatePipe
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-
+  imports: [JblogSharedLibsModule],
+  declarations: [AlertComponent, AlertErrorComponent, LoginModalComponent, HasAnyAuthorityDirective],
+  entryComponents: [LoginModalComponent],
+  exports: [JblogSharedLibsModule, AlertComponent, AlertErrorComponent, LoginModalComponent, HasAnyAuthorityDirective],
 })
 export class JblogSharedModule {}

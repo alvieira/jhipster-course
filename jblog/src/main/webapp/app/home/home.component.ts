@@ -1,37 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {PostService} from "../entities/post/post.service";
-import {Post} from "../entities/post/post.model";
-import {ResponseWrapper} from "../shared/model/response-wrapper.model";
+import { HttpResponse } from '@angular/common/http';
+
+import { Post } from 'app/shared/model/post.model';
+import { PostService } from 'app/entities/post/post.service';
 
 @Component({
-    selector: 'jhi-home',
-    templateUrl: './home.component.html',
-    styleUrls: [
-        'home.css'
-    ]
-
+  selector: 'jhi-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['home.scss'],
 })
 export class HomeComponent implements OnInit {
+  posts: Post[] = [];
 
-    posts: Post[] = [];
+  constructor(private postService: PostService) {}
 
-    constructor(private postService: PostService) {}
+  ngOnInit(): void {
+    this.loadAll();
+  }
 
-    loadAll() {
-        this.postService.query().subscribe(
-            (res: ResponseWrapper) => {
-                console.log(res.json);
-                this.posts = res.json;
-            },
-            (res: ResponseWrapper) => {
-                console.log( res.json );
-            }
-        );
-    }
-
-    ngOnInit() {
-        console.log('ngOnInit...');
-        this.loadAll();
-    }
-
+  loadAll(): void {
+    this.postService.query().subscribe((res: HttpResponse<Post[]>) => (this.posts = res.body || []));
+  }
 }

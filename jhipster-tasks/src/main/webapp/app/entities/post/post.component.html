@@ -1,0 +1,65 @@
+<div>
+    <h2 id="page-heading">
+        <span>Posts</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-post" [routerLink]="['/post/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span>
+            Create a new Post
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="posts?.length === 0">
+        <span>No posts found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="posts && posts.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span>ID</span></th>
+                    <th scope="col" ><span>Title</span></th>
+                    <th scope="col" ><span>Body</span></th>
+                    <th scope="col" ><span>Author</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let post of posts ;trackBy: trackId">
+                    <td><a [routerLink]="['/post', post.id, 'view']">{{ post.id }}</a></td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.body }}</td>
+                    <td>{{ post.author }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/post', post.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/post', post.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(post)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

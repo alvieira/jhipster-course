@@ -8,6 +8,10 @@ import { RouterModule } from '@angular/router';
         path: 'task',
         loadChildren: () => import('./task/task.module').then(m => m.TasksTaskModule),
       },
+      {
+        path: 'post',
+        loadChildren: () => import('./post/post.module').then(m => m.TasksPostModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

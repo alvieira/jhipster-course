@@ -1,16 +1,15 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-import { JblogPostModule } from './post/post.module';
-/* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    imports: [
-        JblogPostModule,
-        /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
-    ],
-    declarations: [],
-    entryComponents: [],
-    providers: [],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  imports: [
+    RouterModule.forChild([
+      {
+        path: 'post',
+        loadChildren: () => import('./post/post.module').then(m => m.JblogPostModule),
+      },
+      /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
+    ]),
+  ],
 })
 export class JblogEntityModule {}

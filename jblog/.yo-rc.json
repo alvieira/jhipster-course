@@ -1,16 +1,17 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.therealdanvega"
+      "packageName": "com.alvieira.jblog"
     },
-    "jhipsterVersion": "4.6.2",
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
     "baseName": "jblog",
-    "packageName": "com.therealdanvega",
-    "packageFolder": "com/therealdanvega",
+    "packageName": "com.alvieira.jblog",
+    "packageFolder": "com/alvieira/jblog",
     "serverPort": "8080",
     "authenticationType": "jwt",
-    "hibernateCache": "ehcache",
-    "clusteredHttpSession": false,
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
@@ -19,14 +20,22 @@
     "messageBroker": false,
     "serviceDiscoveryType": false,
     "buildTool": "maven",
-    "enableSocialSignIn": false,
-    "jwtSecretKey": "f84e5f47f3536019d74f049f232d6c54af380dc6",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZWFjYmFkOGVmNWVkYjI2MGFiYjkxMTMxNWYwNmE0MWMwZmM0YmZmYjBmYTM5YWVmZDBmODExNmJiZmM1Yjk0MjFhYzhmMmVkN2I0ZmFkZmJmMjc5NDQ0OTNiZTRmMGE0NjU3YjBjNDA4ZjFmMDVkMjhmMGFlOWRiYjZkZGNmZDg=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
     "clientFramework": "angularX",
-    "useSass": false,
-    "clientPackageManager": "yarn",
-    "applicationType": "monolith",
+    "clientTheme": "journal",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1600733277740,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "enableTranslation": false
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": [],
+    "lastLiquibaseTimestamp": 1600736350000
   }
 }
