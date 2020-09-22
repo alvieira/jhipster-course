@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.alvieira.tasks.mongo"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "TasksAppMongo",
+    "packageName": "com.alvieira.tasks.mongo",
+    "packageFolder": "com/alvieira/tasks/mongo",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDA2YmYzMWRlYmMwZDY4Y2Q0YzFlYTI1YTcwYWM2ZGQwYTBmMzU5YmEwMDZmYjNlZTZhOTdhYzYyNDE4OWYyOGQzMGM5OTJlNzU4ZDBkYzMwOGU0ZGM4Yjk4Nzk3ZmYxNmU0YzRmMzhjYWE1YzkwMWY2OTU5NGMyZWVjNjMzZDE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "flatly",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1600743099984,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
