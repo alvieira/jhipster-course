@@ -1,16 +1,17 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.jhipcon"
+      "packageName": "com.alvieira.conference"
     },
-    "jhipsterVersion": "4.7.0",
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "microservice",
     "baseName": "conference",
-    "packageName": "com.jhipcon",
-    "packageFolder": "com/jhipcon",
+    "packageName": "com.alvieira.conference",
+    "packageFolder": "com/alvieira/conference",
     "serverPort": "8081",
     "authenticationType": "jwt",
-    "hibernateCache": "hazelcast",
-    "clusteredHttpSession": false,
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
@@ -19,18 +20,19 @@
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "ec4776b9e6fa45871d9e436bc31650af67bd6f47",
-    "enableTranslation": false,
-    "applicationType": "microservice",
-    "testFrameworks": [
-      "gatling",
-      "cucumber"
-    ],
+    "jwtSecretKey": "NWUyZDkxOTA5Y2RjYjRkM2U3YWE3YjBkYjRmMzhiZTI3YTJhNDExNzJhMGRmODVhOTE4MjQzYzdiOWUzMWE2MjEyZDZkZDcwNzE4MDliMmE5MTdjOTZmZDkyZmIzZDQ5OWRkMzFlZDEyMmJiMzhiMjk4NDFhODFmNjEzYzQ2NTU=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1600820506756,
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
     "skipClient": true,
-    "skipUserManagement": true,
-    "clientPackageManager": "yarn"
+    "skipUserManagement": true
   }
 }

@@ -1,16 +1,17 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.jhipcon"
+      "packageName": "com.alvieira.gateway"
     },
-    "jhipsterVersion": "4.7.0",
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "gateway",
     "baseName": "gateway",
-    "packageName": "com.jhipcon",
-    "packageFolder": "com/jhipcon",
+    "packageName": "com.alvieira.gateway",
+    "packageFolder": "com/alvieira/gateway",
     "serverPort": "8080",
     "authenticationType": "jwt",
-    "hibernateCache": "hazelcast",
-    "clusteredHttpSession": false,
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
@@ -19,19 +20,21 @@
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "7dc78a3c5c842a68cdcd58701ad7e520c2968221",
-    "clientFramework": "angularX",
+    "jwtSecretKey": "ZGE3MGU1ZTBkYmE2MmU3MTg4YjFmNTRkOGMxNzAyOTgxOGU0ZjZkNmFhOGU0NzcyNzVhMzIxMTkzYTZlOTBlOWU4MjQ2NTI1NDYxOTJmMzU3NzdjNzA5MjM4NDI1NDgzYzE3OTc3MjNlMTA0YmE5NzFlY2RlMDBjM2FiMjQ3NGM=",
+    "embeddableLaunchScript": false,
     "useSass": true,
-    "clientPackageManager": "yarn",
-    "applicationType": "gateway",
-    "testFrameworks": [
-      "gatling",
-      "cucumber",
-      "protractor"
-    ],
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1600819223709,
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "enableTranslation": false
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
   }
 }

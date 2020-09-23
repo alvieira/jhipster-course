@@ -4,29 +4,25 @@ import { GatewayRoutesService } from './gateway-routes.service';
 import { GatewayRoute } from './gateway-route.model';
 
 @Component({
-    selector: 'jhi-gateway',
-    templateUrl: './gateway.component.html',
-    providers: [ GatewayRoutesService ]
+  selector: 'jhi-gateway',
+  templateUrl: './gateway.component.html',
+  providers: [GatewayRoutesService],
 })
-export class JhiGatewayComponent implements OnInit {
+export class GatewayComponent implements OnInit {
+  gatewayRoutes: GatewayRoute[] = [];
+  updatingRoutes = false;
 
-    gatewayRoutes: GatewayRoute[];
-    updatingRoutes: Boolean;
+  constructor(private gatewayRoutesService: GatewayRoutesService) {}
 
-    constructor(
-        private gatewayRoutesService: GatewayRoutesService
-    ) {
-    }
+  ngOnInit(): void {
+    this.refresh();
+  }
 
-    ngOnInit() {
-        this.refresh();
-    }
-
-    refresh() {
-        this.updatingRoutes = true;
-        this.gatewayRoutesService.findAll().subscribe((gatewayRoutes) => {
-            this.gatewayRoutes = gatewayRoutes;
-            this.updatingRoutes = false;
-        });
-    }
+  refresh(): void {
+    this.updatingRoutes = true;
+    this.gatewayRoutesService.findAll().subscribe(gatewayRoutes => {
+      this.gatewayRoutes = gatewayRoutes;
+      this.updatingRoutes = false;
+    });
+  }
 }
