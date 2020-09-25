@@ -51,6 +51,10 @@ public class CacheConfiguration {
             createCache(cm, com.alvieira.gateway.domain.User.class.getName());
             createCache(cm, com.alvieira.gateway.domain.Authority.class.getName());
             createCache(cm, com.alvieira.gateway.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.alvieira.gateway.domain.Speaker.class.getName());
+            createCache(cm, com.alvieira.gateway.domain.Speaker.class.getName() + ".sessions");
+            createCache(cm, com.alvieira.gateway.domain.Session.class.getName());
+            createCache(cm, com.alvieira.gateway.domain.Session.class.getName() + ".speakers");
             // jhipster-needle-ehcache-add-entry
         };
     }

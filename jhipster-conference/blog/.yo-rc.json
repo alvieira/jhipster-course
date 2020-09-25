@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.alvieira.blog"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "microservice",
+    "baseName": "blog",
+    "packageName": "com.alvieira.blog",
+    "packageFolder": "com/alvieira/blog",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzhhMGRmYjdlMGY4NmVmZmU0ZGY2MDc3OWQxOGMxODU5OGYwN2VjMTk0YjI2NGIwODRmNmUxMDVhNzZkYzg5NWQ0YjA0MWIxMDY1YTEyNDllOWI5MTBmNTg2M2UzZTdlNzc2NDRiMmIwZDNiODM0YjQ2NDNmMDE2YzE5OGExNmQ=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1600997065905,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
